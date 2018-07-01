@@ -104,3 +104,23 @@ class MovieGenreApi(APIView):
         genre.movie_set.remove(movie)
         return Response(status=status.HTTP_204_NO_CONTENT)
 
+
+class MovieSearch(APIView):
+
+    def get(self, request, format=None):
+        name = ""
+
+        if 'name' in request.query_params:
+            name = request.query_params['name']
+
+        page_no = 1
+
+        if 'page' in request.query_params:
+            page_no = request.query_params['']
+
+        page_no -= 1
+
+        movies = Movie.objects.filter(name__icontains=name)[page_no*10: (page_no + 1)*10]
+
+        serializer = MovieSerializer(movies, many=True)
+        return Response(serializer.data)

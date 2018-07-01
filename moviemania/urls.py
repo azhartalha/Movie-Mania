@@ -27,4 +27,7 @@ urlpatterns = [
 
     path('signup', SignUpAPi.as_view(), name="sign_up"),
     path('user_update', UpdateUserApi.as_view(), name="user_update"),
+
+    path('movie_search', MovieSearch.as_view(), name="movie_search"),
+    path('cast_search', CastSearch.as_view(), name="cast_search"),
 ]

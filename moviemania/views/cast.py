@@ -60,3 +60,25 @@ class UpdateCastApi(APIView):
         cast = get_object_or_404(Cast, pk=cast_id)
         cast.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class CastSearch(APIView):
+
+    def get(self, request, format=None):
+        name = ""
+
+        if 'name' in request.query_params:
+            name = request.query_params['name']
+
+        page_no = 1
+
+        if 'page' in request.query_params:
+            page_no = request.query_params['']
+
+        page_no -= 1
+
+        cast = Cast.objects.filter(name__icontains=name)[page_no * 10: (page_no + 1) * 10]
+
+        serializer = CastSerializer(cast, many=True)
+        return Response(serializer.data)
+
