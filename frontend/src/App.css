@@ -1,9 +1,68 @@
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Title {
+  position: absolute;
+  color: #5C8EF2;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  left: 5%;
+  top: 5%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.header-center {
+  position: relative;
+  top: 0;
+  left: 35%;
+}
+
+.header {
+  position: relative;
+  width: 1000px;
+  height: 100px;
+}
+
+.header-center-bottom{
+  position: relative;
+  left: 5%;
+}
+
+.header-right{
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+
+.App{
+  width: 1000px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#MMdrop{
+  position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);
+}
+
+#MMdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ddd;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#MMdropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#MMdropdown:hover #MMdropdown-content {display: block;}
+
+#MMdropdown-content a:hover {background-color:#5C8EF2}
+
+.MMlogin-form {
+  width: 300px;
+}
+
+.MMlogin-form > *{
+  margin: 15px 0;
 }

@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import './App.css';
+import MMHeader from './header';
+import LoginClass from './login';
+import createBrowserHistory from 'history/createBrowserHistory'
+
 
 class App extends Component {
-  constructor()
+  constructor(props)
   {
-    this.state = {isLoggedIn: False}
+    super(props);
+    this.state = {isLoggedIn: true, username: ""};
   }
   
   readCookie(name) {
@@ -26,27 +31,28 @@ class App extends Component {
   componentWillMount()
   {
     if(this.readCookie("JWT")==null)
-      this.setState({isLoggedIn: false})
+      this.setState({isLoggedIn: false, username: ""})
     else
-      this.setState({isLoggedIn: true})
+      this.setState({isLoggedIn: true, username: this.readCookie("username")})
+    console.log("will mount")
   }
 
-  changeLogin()
-  {
-    this.setState(prev => {isLoggedIn: !prev.isLoggedIn})
+  setLoginStatus = (newStatus, newUserName) => {
+    this.setState({isLoggedIn: newStatus, username: newUserName})
   }
   
   render() {
+    console.log(this.props)
     return (
-      <div className="jumbotron">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          I am chaing this to test
-        </p>
-      </div>
+      <Router>
+        <div className="App">
+          <MMHeader title="MOVIEMAINA" isLoggedIn={this.state.isLoggedIn} username={this.state.username} setLoginStatus={this.setLoginStatus}/>
+          <div className="jumbotron">    
+            <Route exact path="/moviemania/login" component={args => <LoginClass isLoggedIn={this.state.isLoggedIn} setLoginStatus={this.setLoginStatus}/>} />
+            <Route exact path="/moviemania/signup" component={args => <p>signup</p>} />
+          </div>
+        </div>
+      </Router>
     );
   }
 }

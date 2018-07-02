@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import { spawn } from 'child_process';
-import { Redirect } from 'react-router-dom';
-
-class MyHeader extends Component{
+import { BrowserRouter as Router, Link} from "react-router-dom";
+class MMHeader extends Component{
     constructor(props)
     {
         super(props);
@@ -10,7 +8,6 @@ class MyHeader extends Component{
         this.state = {
             isLoggedIn: this.props.isLoggedIn,
         }
-        console.log("header", this.state.isLoggedIn)
     }
     createCookie(name,value,days) {
         if (days) {
@@ -24,51 +21,78 @@ class MyHeader extends Component{
         document.cookie = name + "=" + value + expires + "; path=/";
     }
     
-    readCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
-            while (c.charAt(0)==' ') {
-                c = c.substring(1,c.length);
-            }
-            if (c.indexOf(nameEQ) == 0) {
-                return c.substring(nameEQ.length,c.length);
-            }
-        }
-        return null;
-    }
-    
     eraseCookie(name) {
         this.createCookie(name,"",-1);
     }
 
-    toggleLoggedIn = () => {
-        if(this.props.isLoggedIn)
-        {
-            this.eraseCookie("JWT");
-            this.setState(prev => {isLoggedIn: !prev.isLoggedIn});
-            this.props.toggler(this.state.isLoggedIn);    
-        }
+    logout = () => {
+        this.eraseCookie("JWT");
+        this.eraseCookie("username");
+        this.props.setLoginStatus(false);
     }
 
+    setSearchType(){
+        var selectBox = document.getElementById("search-select");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        this.setState({sreachType: selectedValue});
+    }
+    
     render(){
         const {title} = this.props;
         const isLoggedIn = this.props.isLoggedIn;
-        console.log(isLoggedIn, "In Header")
         return (
-            <div className="header">
-                <h1 className = "title">{title}</h1>
-                <div className = "Menu" onClick = {this.toggleLoggedIn}>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div className="header">
+                <h1 className="Title" href="#">{title}</h1>
+                <div className="header-center">
+                    <div className="form-inline my-2 my-lg-0">
+                        <input className="form-control mr-sm-2" type="text" id="seach-bar" placeholder="Search"/>
+                        <select multiple="" className="form-control" id="search-select">
+                            <option value={1}>movie</option>
+                            <option value={2}>celeb</option>
+                        </select> &nbsp;&nbsp;
+                        <Link className="btn btn-secondary my-2 my-sm-0" to="/moviemania/search">Search</Link>
+                    </div>
+                    <div className="header-center-bottom">
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item">
+                                <a className="nav-link" href="javascript:void(0);">Movies</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="javascript:void(0);">Celebs</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="javascript:void(0);">Genres</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="header-right">
                     {
                         isLoggedIn?
-                        <span>Logout</span>:
-                        <span>Login</span>
+                        <ul className="nav nav-pills">
+                            <li className="nav-item dropdown show" id="MMdropdown">
+                                <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false" id="MMdropbtn">{this.props.username}</a>
+                                    <div x-placement="bottom-start" id="MMdropdown-content">
+                                        <a href="javascript:void(0);">Account</a>
+                                        <a href="javascript:void(0);" onClick={this.logout}>Logout</a>
+                                    </div>
+                            </li>
+                        </ul>:
+                        <ul className="navbar-nav mr-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link" to ='/moviemania/login'>Login</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to ='/moviemania/signup'>SignUp</Link>
+                            </li>
+                        </ul>
                     }
                 </div>
-            </div>
+                </div>
+            </nav>
         );
     }
 }
 
-export default MyHeader;
+export default MMHeader;
