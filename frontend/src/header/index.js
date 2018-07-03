@@ -4,7 +4,6 @@ class MMHeader extends Component{
     constructor(props)
     {
         super(props);
-        console.log("header", props)  
         this.state = {
             isLoggedIn: this.props.isLoggedIn,
         }
@@ -28,7 +27,8 @@ class MMHeader extends Component{
     logout = () => {
         this.eraseCookie("JWT");
         this.eraseCookie("username");
-        this.props.setLoginStatus(false);
+        this.eraseCookie("isStaff");
+        this.props.setLoginStatus(false, "", "");
     }
 
     setSearchType(){
@@ -56,13 +56,13 @@ class MMHeader extends Component{
                     <div className="header-center-bottom">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0);">Movies</a>
+                                <Link className="nav-link" to="/moviemania/movies">Movies</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0);">Celebs</a>
+                                <Link className="nav-link" to="/moviemania/celebs">Celebs</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0);">Genres</a>
+                                <Link className="nav-link" to="/moviemania/genres">Genres</Link>
                             </li>
                         </ul>
                     </div>
@@ -74,7 +74,7 @@ class MMHeader extends Component{
                             <li className="nav-item dropdown show" id="MMdropdown">
                                 <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);" role="button" aria-haspopup="true" aria-expanded="false" id="MMdropbtn">{this.props.username}</a>
                                     <div x-placement="bottom-start" id="MMdropdown-content">
-                                        <a href="javascript:void(0);">Account</a>
+                                        <Link to="/moviemania/account">Account</Link>
                                         <a href="javascript:void(0);" onClick={this.logout}>Logout</a>
                                     </div>
                             </li>

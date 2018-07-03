@@ -26,7 +26,8 @@ urlpatterns = [
     path('genre/<int:genre_id>', GenreDetailed.as_view(), name="genre_detailed"),
 
     path('signup', SignUpAPi.as_view(), name="sign_up"),
-    path('user_update', UpdateUserApi.as_view(), name="user_update"),
+    path('user_update', UserDetailedApi.as_view(), name="user_update"),
+    path('user_permissions', UserPermissionsApi.as_view(), name="user_permissions"),
 
     path('movie_search', MovieSearch.as_view(), name="movie_search"),
     path('cast_search', CastSearch.as_view(), name="cast_search"),

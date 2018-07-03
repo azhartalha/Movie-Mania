@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import { BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 class LoginClass extends Component{
     
     createCookie(name,value,days) {
@@ -23,16 +23,41 @@ class LoginClass extends Component{
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
             },
             body: `username=${name}&password=${pass}`
-        }).then(res => res.status==400?alert("Invalid details"):res.json().then(response => {
-            console.log(this)
-            this.createCookie("JWT", response.token, 1);
-            this.createCookie("username", name, 1);
-            this.props.setLoginStatus(true, name);
-        }).then(() => this.setState({name:"", pass:""})));
+        }).then(res => {
+            if(res.status==400)
+            {
+                alert("Invalid details")   
+            }
+            else
+            {
+                res.json()
+                .then(response => {
+                    this.createCookie("JWT", response.token, 1);
+                    this.createCookie("username", name);
+                    fetch("http://127.0.0.1:8000/MM_apis/user_permissions", {headers: {
+                        'Authorization': "JWT "+response.token
+                      }
+                    })
+                .then(res =>{
+                    if(res.status==403)
+                    {
+                        this.createCookie("isStaff", "0", 1);
+                        this.props.setLoginStatus(true, name, "0");
+                    }
+                    else
+                    {
+                        this.createCookie("isStaff", "1", 1);
+                        this.props.setLoginStatus(true, name, "1");
+                    }
+                })
+                })
+            }
+        });
     }
 
     render(){
         return(
+        this.props.isLoggedIn?<Redirect to="/moviemania/movies"/>:
         <div>
             <div className="MMlogin-form">
                 <input className="form-control mr-sm-2" type="text" id="usernameField" placeholder="username"/>
