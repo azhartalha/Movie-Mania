@@ -5,13 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/body/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/body/login/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/login/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/signup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/signup/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviemania/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviemania/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/moviemania/views/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviemania/views/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="135">
+              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -50,7 +47,7 @@
       <file leaf-file-name="permissions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/permissions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="306">
               <caret line="20" column="19" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="19" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -62,8 +59,8 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state relative-caret-position="187">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -71,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="auth.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moviemania/views/auth.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="50">
+              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -86,7 +83,7 @@
       <file leaf-file-name="movies.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
+            <state relative-caret-position="119">
               <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="39" />
             </state>
           </provider>
@@ -107,7 +104,7 @@
       <file leaf-file-name="cast.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/views/cast.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="119">
               <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
@@ -119,7 +116,7 @@
       <file leaf-file-name="reviews.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="68">
               <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
@@ -131,7 +128,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1752">
+            <state relative-caret-position="544">
               <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
@@ -179,8 +176,8 @@
         <option value="$PROJECT_DIR$/moviemania/views/movies.py" />
         <option value="$PROJECT_DIR$/moviemania/views/cast.py" />
         <option value="$PROJECT_DIR$/webapps/settings.py" />
-        <option value="$PROJECT_DIR$/moviemania/views/auth.py" />
         <option value="$PROJECT_DIR$/moviemania/urls.py" />
+        <option value="$PROJECT_DIR$/moviemania/views/auth.py" />
       </list>
     </option>
   </component>
@@ -196,7 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,6 +214,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,21 +298,27 @@
       <option name="project" value="LOCAL" />
       <updated>1530538025127</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sign up and auth frontend commit">
+      <created>1530620712964</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1530620712964</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -344,7 +347,8 @@
     <MESSAGE value="Changing front end" />
     <MESSAGE value="Search Backend commit" />
     <MESSAGE value="Front end header and login commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Front end header and login commit" />
+    <MESSAGE value="sign up and auth frontend commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="sign up and auth frontend commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -684,7 +688,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/cast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="119">
           <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
@@ -694,7 +698,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
+        <state relative-caret-position="68">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
@@ -704,7 +708,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1752">
+        <state relative-caret-position="544">
           <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
           <folding>
             <element signature="e#308#317#0" expanded="true" />
@@ -721,7 +725,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/permissions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="306">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="19" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -731,37 +735,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
+        <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="187">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/views/auth.py">
+    <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="135">
+          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
+    <entry file="file://$PROJECT_DIR$/moviemania/views/auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="50">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

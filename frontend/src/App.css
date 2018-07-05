@@ -16,7 +16,7 @@
 .header {
   position: relative;
   width: 1000px;
-  height: 100px;
+  height: 90px;
 }
 
 .header-center-bottom{
@@ -69,4 +69,9 @@
 
 .MMlogin-form > *{
   margin: 15px 0;
+}
+
+.MM_lable >*{
+  display: inline-block;
+  margin: 30px;
 }

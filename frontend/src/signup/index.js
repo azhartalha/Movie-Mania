@@ -103,10 +103,11 @@ class SignUpComp extends Component{
                       body: JSON.stringify(data)
             })
         .then((res) => {
-            res.json().then(response => console.log(response))
             if(res.status==201)
                 this.login()
-        })
+            else if(res.status==400)
+                alert("A user with the username already exists");
+            })
     }
     render(){
         return(

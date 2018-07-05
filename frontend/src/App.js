@@ -4,6 +4,7 @@ import './App.css';
 import MMHeader from './header';
 import LoginClass from './login';
 import SignUpComp from './signup';
+import UserComp from './account';
 
 class App extends Component {
   constructor(props)
@@ -49,16 +50,27 @@ class App extends Component {
         <div className="App">
           <MMHeader title="MOVIEMAINA" isLoggedIn={this.state.isLoggedIn} username={this.state.username} setLoginStatus={this.setLoginStatus}/>
           <div className="jumbotron">    
+            <Route exact path="/moviemania" component={args => <Redirect to="/moviemania/movies"/>} />
             <Route exact path="/moviemania/login" component={args => <LoginClass isLoggedIn={this.state.isLoggedIn} setLoginStatus={this.setLoginStatus}{...args}/>} />
             <Route exact path="/moviemania/signup" component={args => <SignUpComp isLoggedIn={this.state.isLoggedIn} setLoginStatus={this.setLoginStatus}{...args}/>} />
             
-            <Route exact path="/moviemania/account" component={args => <p>account</p>}/>
-            
+            <Route exact path="/moviemania/account" component={args => <UserComp username={this.state.username} isLoggedIn={this.state.isLoggedIn}/>}/>
+            <Route exact path="/moviemania/account/update" component={args => <p>account update</p>}/>
+
             <Route exact path="/moviemania/movies" component={args => <p>movies</p>} />
+            <Route exact path="/moviemania/movies/create" component={args => <p>create movie</p>} />
+            <Route exact path="/moviemania/movies/:id" component={args => <p>movie detailed</p>} />
+            <Route exact path="/moviemania/movies/:id/update" component={args => <p>movie update</p>} />
+
             <Route exact path="/moviemania/celebs" component={args => <p>celebs</p>} />
+            <Route exact path="/moviemania/celebs/create" component={args => <p>celebs create</p>} />
+            <Route exact path="/moviemania/celebs/:id" component={args => <p>celeb detailed</p>} />
+            <Route exact path="/moviemania/celebs/:id/update" component={args => <p>celeb update</p>} />
+
             <Route exact path="/moviemania/genres" component={args => <p>genres</p>} />
+            <Route exact path="/moviemania/genres/:id" component={args => <p>genre detailed</p>} />
+
             <Route exact path="/moviemania/search" component={args => <p>search</p>} />
-            <Route exact path="/moviemania" component={args => <Redirect to="/moviemania/movies"/>} />
           </div>
         </div>
       </Router>

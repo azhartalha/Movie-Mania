@@ -23,7 +23,7 @@ class UserDetailedApi(APIView):
     """
     def get(self, request, format=None):
         user = get_object_or_404(User, pk=request.user.id)
-        serializer = UserSerializer(user)
+        serializer = UserUpdateSerializer(user)
         return Response(serializer.data)
 
     """
