@@ -43,7 +43,7 @@ class MMHeader extends Component{
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="header">
-                <h1 className="Title" href="#">{title}</h1>
+                <Link to="/moviemania/"><h1 className="Title" href="#">{title}</h1></Link>
                 <div className="header-center">
                     <div className="form-inline my-2 my-lg-0">
                         <input className="form-control mr-sm-2" type="text" id="seach-bar" placeholder="Search"/>

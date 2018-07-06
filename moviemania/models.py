@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 class Cast(models.Model):
     name = models.CharField(max_length=64)
-    born = models.DateField(null = True, blank = True)
+    born = models.DateField(null=True, blank=True)
     description = models.CharField(max_length=256, null=True, blank=True)
-    display_picture = models.CharField(max_length=128, null=True, blank=True)
+    display_picture = models.ImageField(upload_to='uploaded_media', null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -22,9 +22,9 @@ class Genre(models.Model):
 class Movie(models.Model):
     name = models.CharField(max_length=64)
     description = models.CharField(max_length=256, null=True, blank=True)
-    display_picture = models.CharField(max_length=128, null=True, blank=True)
+    display_picture = models.ImageField(upload_to='uploaded_media', null=True, blank=True)
     trailer = models.CharField(max_length=128, null=True, blank=True)
-    release_date = models.DateField(null = True, blank = True)
+    release_date = models.DateField(null=True, blank=True)
     genres = models.ManyToManyField(Genre)
     cast = models.ManyToManyField(Cast)
 
@@ -44,7 +44,7 @@ class Review(models.Model):
 
 
 class Picture(models.Model):
-    link = models.CharField(max_length=64)
+    image = models.ImageField(upload_to='uploaded_media')
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
 
     def __str__(self):

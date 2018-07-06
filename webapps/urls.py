@@ -18,6 +18,8 @@ from django.urls import path
 from django.views.generic import TemplateView
 from django.conf.urls import url, include
 from rest_framework_jwt.views import obtain_jwt_token
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +27,4 @@ urlpatterns = [
     url(r'moviemania/', TemplateView.as_view(template_name="index.html")),
     url(r'^api-auth/', include('rest_framework.urls')),
     url(r'^api-token-auth/', obtain_jwt_token),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

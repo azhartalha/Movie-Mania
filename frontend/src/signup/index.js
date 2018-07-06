@@ -112,7 +112,6 @@ class SignUpComp extends Component{
     render(){
         return(
         this.props.isLoggedIn?<Redirect to="moviemania/movies" />:
-        <div>
             <div className="MMlogin-form">
                 <input className="form-control mr-sm-2" type="text" id="usernameField" placeholder="Username *"/>
                 <input className="form-control mr-sm-2" type="password" id="passwordField" placeholder="Password *"/>
@@ -122,7 +121,6 @@ class SignUpComp extends Component{
                 <input className="form-control mr-sm-2" type="text" id="emailFeild" placeholder="Email"/>
                 <button type="button" className="btn btn-info" onClick={() => this.SignUp()}>Sign Up</button>
             </div>
-        </div>
         )
     }
 }
