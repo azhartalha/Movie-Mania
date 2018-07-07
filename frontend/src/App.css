@@ -79,12 +79,15 @@
 .movie_card{
   width: 500px;
   height: 180px;
+  position: relative;
 }
 
-.MM_img{
+.MM-img{
   width: 15%; 
   height: 60%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 1);
+  position: relative;
+  top: 0;
+  left: 1%;
 }
 
 .MM-page-header{
@@ -111,3 +114,29 @@
   top: 0;
   right: 2%;
 }
+
+.checked {
+  color: orange;
+}
+
+.moviecard-inner {
+  height: 100%; 
+  width: 800px; 
+  position: absolute;
+  top: 0; 
+  left: 25%
+}
+
+.MM-link{
+  color: white;
+}
+
+.MM-link-dark{
+  color: navy;
+}
+
+.badge-secondary{
+    margin: 2px;
+}
+
+

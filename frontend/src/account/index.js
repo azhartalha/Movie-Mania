@@ -82,7 +82,7 @@ class UserUpdateComp extends Component{
     constructor(props)
     {
         super(props);
-        this.state ={data_loaded: false, data: {}, updated: false};
+        this.state ={data_loaded: false, data: {}};
     }
 
     readCookie(name) {
@@ -154,7 +154,7 @@ class UserUpdateComp extends Component{
             if(res.status==201)
             {
                 alert("Account updated");
-                this.setState({updated: true});
+                this.props.history.push("/moviemania/account");
             }
             else
                 console.log(res.status);
@@ -163,7 +163,6 @@ class UserUpdateComp extends Component{
 
     render(){
         if(this.props.isLoggedIn)
-            if(this.state.updated === false)
         return(
             !this.state.data_loaded?
                 <p>Loading...</p>:
@@ -195,8 +194,6 @@ class UserUpdateComp extends Component{
                 <button type="button" className="btn btn-info" onClick={() => this.update()}>Update</button>
                 </div>
         )
-            else
-                return <Redirect to="/moviemania/account" />
         else
             return <Redirect to="/moviemania/login" />
     }

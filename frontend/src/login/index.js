@@ -33,7 +33,7 @@ class LoginClass extends Component{
                 res.json()
                 .then(response => {
                     this.createCookie("JWT", response.token, 1);
-                    this.createCookie("username", name);
+                    this.createCookie("username", name, 1);
                     fetch("http://127.0.0.1:8000/MM_apis/user_permissions", {headers: {
                         'Authorization': "JWT "+response.token
                       }
