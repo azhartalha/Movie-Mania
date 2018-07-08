@@ -5,7 +5,9 @@ import MMHeader from './header';
 import LoginClass from './login';
 import SignUpComp from './signup';
 import UserComp, {UserUpdateComp} from './account';
-import MoviesListComp, {MovieDetailedComp, AddMovieComp} from './movie';
+import MoviesListComp, {MovieDetailedComp, AddMovieComp, UpdateMovieComp} from './movie';
+import CelebListComp, {AddCelebComp, UpdateCelebComp, CelebDetailedComp} from './celebs';
+
 class App extends Component {
   constructor(props)
   {
@@ -60,12 +62,12 @@ class App extends Component {
             <Route exact path="/moviemania/movies" component={args => <MoviesListComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/movies/create" component={args => <AddMovieComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/movies_detailed/:id" component={args => <MovieDetailedComp isStaff={this.state.isStaff}{...args}/>} />
-            <Route exact path="/moviemania/movies_detailed/:id/update" component={args => <p>movie update</p>} />
+            <Route exact path="/moviemania/movies_detailed/:id/update" component={args => <UpdateMovieComp isStaff={this.state.isStaff}{...args}/>} />
 
-            <Route exact path="/moviemania/celebs" component={args => <p>celebs</p>} />
-            <Route exact path="/moviemania/celebs/create" component={args => <p>celebs create</p>} />
-            <Route exact path="/moviemania/celebs_detailed/:id" component={args => <p>celeb detailed</p>} />
-            <Route exact path="/moviemania/celebs_detailed/:id/update" component={args => <p>celeb update</p>} />
+            <Route exact path="/moviemania/celebs" component={args => <CelebListComp isStaff={this.state.isStaff}{...args}/>} />
+            <Route exact path="/moviemania/celebs/create" component={args => <AddCelebComp isStaff={this.state.isStaff}{...args}/>} />
+            <Route exact path="/moviemania/celebs_detailed/:id" component={args => <CelebDetailedComp isStaff={this.state.isStaff}{...args}/>} />
+            <Route exact path="/moviemania/celebs_detailed/:id/update" component={args => <UpdateCelebComp isStaff={this.state.isStaff}{...args}/>} />
 
             <Route exact path="/moviemania/genres" component={args => <p>genres</p>} />
             <Route exact path="/moviemania/genres/:id" component={args => <p>genre detailed</p>} />

@@ -19,7 +19,7 @@ urlpatterns = [
     path('cast', CastApi.as_view(), name="casts"),
     path('cast/create', CreateCastApi.as_view(), name="casts_create"),
     path('cast/<int:cast_id>', CastDetailedApi.as_view(), name="cast_detailed"),
-    path('cast/<int:cast_id/update>', UpdateCastApi.as_view(), name="cast_update"),
+    path('cast/<int:cast_id>/update', UpdateCastApi.as_view(), name="cast_update"),
 
     path('genre', GenreApi.as_view(), name="genre"),
     path('genre/create', CreateGenreApi.as_view(), name="genre_create"),

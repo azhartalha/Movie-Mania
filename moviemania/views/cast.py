@@ -10,7 +10,14 @@ from ..permissions import IsStaffMember
 class CastApi(APIView):
 
     def get(self, request, format=None):
-        casts = Cast.objects.all()
+        page_no = 1
+
+        if 'page' in request.query_params:
+            page_no = int(request.query_params['page'])
+
+        page_no -= 1
+
+        casts = Cast.objects.all()[page_no * 10:page_no * 10 + 10]
         serializer = CastSerializer(casts, many=True)
         return Response(serializer.data)
 
@@ -22,7 +29,7 @@ class CastDetailedApi(APIView):
     def get(self, request, cast_id, format=None):
         cast = get_object_or_404(Cast, pk=cast_id)
         res = CastSerializer(cast).data
-        res['movies'] = cast.movie_set.all().values("id", "name", "release_date").order_by("release_date")
+        res['movies'] = cast.movie_set.all().values("id", "name", "release_date").order_by("-release_date")
         return Response(res)
 
 
