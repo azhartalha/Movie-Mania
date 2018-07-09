@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/genre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/genre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/movie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/movie/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviemania/views/reviews.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviemania/views/reviews.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,22 +18,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="genre.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/views/genre.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
+            <state relative-caret-position="105">
               <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
             </state>
           </provider>
@@ -42,8 +30,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="37" column="15" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -66,7 +54,7 @@
       <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
+            <state relative-caret-position="819">
               <caret line="52" column="101" selection-start-line="52" selection-start-column="101" selection-end-line="52" selection-end-column="101" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -75,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moviemania/views/auth.py">
+      <file leaf-file-name="movies.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="-476">
+              <caret line="23" column="20" selection-start-line="18" selection-start-column="8" selection-end-line="23" selection-end-column="20" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -87,11 +75,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1581">
-              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+            <state relative-caret-position="88">
+              <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reviews.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -102,20 +102,8 @@
       <file leaf-file-name="cast.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/views/cast.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="31" column="93" selection-start-line="31" selection-start-column="93" selection-end-line="31" selection-end-column="93" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reviews.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+            <state relative-caret-position="139">
+              <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -166,16 +154,16 @@
         <option value="$PROJECT_DIR$/moviemania/views/actors.py" />
         <option value="$PROJECT_DIR$/moviemania/permissions.py" />
         <option value="$PROJECT_DIR$/moviemania/views/genre.py" />
-        <option value="$PROJECT_DIR$/moviemania/views/reviews.py" />
         <option value="$PROJECT_DIR$/moviemania/serializers.py" />
         <option value="$PROJECT_DIR$/moviemania/views/__init__.py" />
-        <option value="$PROJECT_DIR$/moviemania/views/movies.py" />
         <option value="$PROJECT_DIR$/moviemania/views/auth.py" />
         <option value="$PROJECT_DIR$/moviemania/models.py" />
         <option value="$PROJECT_DIR$/webapps/urls.py" />
         <option value="$PROJECT_DIR$/webapps/settings.py" />
         <option value="$PROJECT_DIR$/moviemania/urls.py" />
+        <option value="$PROJECT_DIR$/moviemania/views/movies.py" />
         <option value="$PROJECT_DIR$/moviemania/views/cast.py" />
+        <option value="$PROJECT_DIR$/moviemania/views/reviews.py" />
       </list>
     </option>
   </component>
@@ -326,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531071294973</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Genre frontend commit">
+      <created>1531111796758</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1531111796758</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Search commit">
+      <created>1531133197423</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1531133197423</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -372,11 +374,13 @@
     <MESSAGE value="user account and all front end urls commit" />
     <MESSAGE value="user account update and change password features added. backend code for uploading images or static files. create movie, movies list sorted by ratings with pages features added to the frontend." />
     <MESSAGE value="celeb list, create, update. movies edit and adding cast and genres to the movie" />
-    <option name="LAST_COMMIT_MESSAGE" value="celeb list, create, update. movies edit and adding cast and genres to the movie" />
+    <MESSAGE value="Genre frontend commit" />
+    <MESSAGE value="Search commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="37" />
+      <option name="time" value="60" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -666,13 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/rest_framework/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -684,16 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -736,7 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
+        <state relative-caret-position="819">
           <caret line="52" column="101" selection-start-line="52" selection-start-column="101" selection-end-line="52" selection-end-column="101" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -746,28 +733,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/cast.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="93" selection-start-line="31" selection-start-column="93" selection-end-line="31" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+        <state relative-caret-position="139">
+          <caret line="84" column="20" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -776,17 +743,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/genre.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
+        <state relative-caret-position="105">
           <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="25" column="15" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="15" />
+        <state relative-caret-position="88">
+          <caret line="15" column="56" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/rest_framework/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="481" selection-start-line="481" selection-end-line="481" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="23" column="20" selection-start-line="18" selection-start-column="8" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

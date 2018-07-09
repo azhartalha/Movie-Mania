@@ -103,9 +103,10 @@ class MoviesListComp extends Component{
                             <tr key={"table row "+movie.id}>
                               <td>
                                 <div className="movie_card">
+                                  {!movie.display_picture?<React.Fragment></React.Fragment>:
                                   <Link to={"/moviemania/movies_detailed/"+movie.id}>
                                     <img src={"http://127.0.0.1:8000"+movie.display_picture} width="15%" height="60%" className="MM-img"/>
-                                  </Link>  
+                                  </Link>}  
                                   <div className="moviecard-inner">
                                     {(this.state.pg_no - 1)*10 + index+1 }. <Link className="MM-link-dark" to={"/moviemania/movies_detailed/"+movie.id}><b>{movie.name }</b></Link>
                                     {

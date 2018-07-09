@@ -13,7 +13,6 @@ class MovieSearchComp extends Component
     {
         if(prevProps.value!=this.props.value)
         {
-            console.log("I am called")
             fetch("http://127.0.0.1:8000/MM_apis/movie_search?page=1&name=" +this.props.value, {
            method: "get", 
             })
@@ -161,7 +160,6 @@ class CelebSearchComp extends Component
     {
         if(prevProps.value!=this.props.value)
         {
-            console.log("I am called")
             fetch("http://127.0.0.1:8000/MM_apis/cast_search?page=1&name=" +this.props.value, {
            method: "get", 
             })

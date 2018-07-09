@@ -9,6 +9,8 @@ import MoviesListComp, {MovieDetailedComp, AddMovieComp, UpdateMovieComp} from '
 import CelebListComp, {AddCelebComp, UpdateCelebComp, CelebDetailedComp} from './celebs';
 import GenreListComp, {GenreDetailedComp} from './genre';
 import SearchComp from './search';
+import ReviewListComp, {CreateReviewComp, EditReviewComp} from './review';
+
 class App extends Component {
   constructor(props)
   {
@@ -65,10 +67,9 @@ class App extends Component {
             <Route exact path="/moviemania/movies_detailed/:id" component={args => <MovieDetailedComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/movies_detailed/:id/update" component={args => <UpdateMovieComp isStaff={this.state.isStaff}{...args}/>} />
 
-            <Route exact path="/moviemania/reviews/:movie_id" component={args => <p>Adding..</p>} />
-            <Route exact path="/moviemania/add_review/:movie_id" component={args => <p>Adding..</p>} />
-            <Route exact path="/moviemania/update_review/:movie_id" component={args => <p>Adding..</p>} />
-            <Route exact path="/moviemania/user_review/:movie_id" component={args => <p>Adding..</p>} />
+            <Route exact path="/moviemania/reviews/:movie_id" component={args => <ReviewListComp isLoggedIn={this.state.isLoggedIn} username={this.state.username}{...args}/>} />
+            <Route exact path="/moviemania/add_review/:movie_id" component={args => <CreateReviewComp isLoggedIn={this.state.isLoggedIn}{...args}/>} />
+            <Route exact path="/moviemania/update_review/:movie_id" component={args => <EditReviewComp isLoggedIn={this.state.isLoggedIn}{...args}/>} />
 
             <Route exact path="/moviemania/celebs" component={args => <CelebListComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/celebs/create" component={args => <AddCelebComp isStaff={this.state.isStaff}{...args}/>} />
