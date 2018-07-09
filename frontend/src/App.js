@@ -7,7 +7,7 @@ import SignUpComp from './signup';
 import UserComp, {UserUpdateComp} from './account';
 import MoviesListComp, {MovieDetailedComp, AddMovieComp, UpdateMovieComp} from './movie';
 import CelebListComp, {AddCelebComp, UpdateCelebComp, CelebDetailedComp} from './celebs';
-
+import GenreListComp, {GenreDetailedComp} from './genre';
 class App extends Component {
   constructor(props)
   {
@@ -69,8 +69,8 @@ class App extends Component {
             <Route exact path="/moviemania/celebs_detailed/:id" component={args => <CelebDetailedComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/celebs_detailed/:id/update" component={args => <UpdateCelebComp isStaff={this.state.isStaff}{...args}/>} />
 
-            <Route exact path="/moviemania/genres" component={args => <p>genres</p>} />
-            <Route exact path="/moviemania/genres/:id" component={args => <p>genre detailed</p>} />
+            <Route exact path="/moviemania/genres" component={args => <GenreListComp {...args}/>} />
+            <Route exact path="/moviemania/genres/:id" component={args => <GenreDetailedComp {...args}/>} />
 
             <Route exact path="/moviemania/search" component={args => <p>search</p>} />
           </div>
