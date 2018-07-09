@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Link} from "react-router-dom";
 class MMHeader extends Component{
     constructor(props)
     {
         super(props);
         this.state = {
             isLoggedIn: this.props.isLoggedIn,
+            searchURL: "/moviemania/search?type=",
+            searchType: "movie",
+            searchValue: ""
         }
     }
     createCookie(name,value,days) {
@@ -30,28 +33,38 @@ class MMHeader extends Component{
         this.eraseCookie("isStaff");
         this.props.setLoginStatus(false, "", "");
     }
-
-    setSearchType(){
-        var selectBox = document.getElementById("search-select");
-        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-        this.setState({sreachType: selectedValue});
-    }
     
+    updateSearchType()
+    {
+        const type = document.getElementById("search-select").value;
+        this.setState({searchType: type});
+    }
+
+    updateSearchValue()
+    {
+        const value = document.getElementById("search-bar").value;
+        this.setState({searchValue: value});
+    }
+
     render(){
         const {title} = this.props;
         const isLoggedIn = this.props.isLoggedIn;
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <div className="header">
-                <Link to="/moviemania/"><h1 className="Title" href="#">{title}</h1></Link>
+                <Link to="/moviemania/"><h1 className="Title">{title}</h1></Link>
                 <div className="header-center">
                     <div className="form-inline my-2 my-lg-0">
-                        <input className="form-control mr-sm-2" type="text" id="seach-bar" placeholder="Search"/>
-                        <select multiple="" className="form-control" id="search-select">
-                            <option value={1}>movie</option>
-                            <option value={2}>celeb</option>
+                        <input className="form-control mr-sm-2" type="text" id="search-bar" onChange={()=> this.updateSearchValue()} placeholder="Search"/>
+                        <select multiple="" className="form-control" onChange={() => this.updateSearchType()} id="search-select">
+                            <option value="movie">movie</option>
+                            <option value="celeb">celeb</option>
                         </select> &nbsp;&nbsp;
-                        <Link className="btn btn-secondary my-2 my-sm-0" to="/moviemania/search">Search</Link>
+                        <Link className="btn btn-secondary my-2 my-sm-0" to={
+                            this.state.searchURL + this.state.searchType +"&value=" + this.state.searchValue
+                            }>
+                            Search
+                        </Link>
                     </div>
                     <div className="header-center-bottom">
                         <ul className="navbar-nav mr-auto">

@@ -80,7 +80,7 @@ class CastSearch(APIView):
         page_no = 1
 
         if 'page' in request.query_params:
-            page_no = request.query_params['']
+            page_no = int(request.query_params['page'])
 
         page_no -= 1
 

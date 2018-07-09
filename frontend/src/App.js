@@ -8,6 +8,7 @@ import UserComp, {UserUpdateComp} from './account';
 import MoviesListComp, {MovieDetailedComp, AddMovieComp, UpdateMovieComp} from './movie';
 import CelebListComp, {AddCelebComp, UpdateCelebComp, CelebDetailedComp} from './celebs';
 import GenreListComp, {GenreDetailedComp} from './genre';
+import SearchComp from './search';
 class App extends Component {
   constructor(props)
   {
@@ -64,6 +65,11 @@ class App extends Component {
             <Route exact path="/moviemania/movies_detailed/:id" component={args => <MovieDetailedComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/movies_detailed/:id/update" component={args => <UpdateMovieComp isStaff={this.state.isStaff}{...args}/>} />
 
+            <Route exact path="/moviemania/reviews/:movie_id" component={args => <p>Adding..</p>} />
+            <Route exact path="/moviemania/add_review/:movie_id" component={args => <p>Adding..</p>} />
+            <Route exact path="/moviemania/update_review/:movie_id" component={args => <p>Adding..</p>} />
+            <Route exact path="/moviemania/user_review/:movie_id" component={args => <p>Adding..</p>} />
+
             <Route exact path="/moviemania/celebs" component={args => <CelebListComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/celebs/create" component={args => <AddCelebComp isStaff={this.state.isStaff}{...args}/>} />
             <Route exact path="/moviemania/celebs_detailed/:id" component={args => <CelebDetailedComp isStaff={this.state.isStaff}{...args}/>} />
@@ -72,7 +78,7 @@ class App extends Component {
             <Route exact path="/moviemania/genres" component={args => <GenreListComp {...args}/>} />
             <Route exact path="/moviemania/genres/:id" component={args => <GenreDetailedComp {...args}/>} />
 
-            <Route exact path="/moviemania/search" component={args => <p>search</p>} />
+            <Route exact path="/moviemania/search" component={args => <SearchComp {...args}/>} />
           </div>
         </div>
       </Router>

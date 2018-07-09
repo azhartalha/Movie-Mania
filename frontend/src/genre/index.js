@@ -73,6 +73,22 @@ class GenreDetailedComp extends Component
         })
     }
 
+    componentDidUpdate(prevProps)
+    {
+        if(prevProps.match.params.id!=this.props.match.params.id)
+        {
+            fetch("http://127.0.0.1:8000/MM_apis/genre/" + this.props.match.params.id + "?page=1", {
+                method: "get", 
+            })
+            .then( res => {
+                res.json()
+            .then(response =>{
+                this.setState({data: response, data_loaded: true, pg_no: 1, genre_id: this.props.match.params.id});
+            })
+            })    
+        }
+    }
+
     nextPage()
     {
         fetch("http://127.0.0.1:8000/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no+1), {

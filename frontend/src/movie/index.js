@@ -391,6 +391,7 @@ class MovieDetailedComp extends Component{
                   <br/>
                   {this.movieCastComp(this.state.data.cast, this.state.movie_id)}
                 </div>
+                <Link className="btn btn-info" to={"/moviemania/reviews/"+this.state.movie_id}>reviews</Link>
             </div>
         )
     }
