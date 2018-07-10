@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/account/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/account/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/celebs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/celebs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/genre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/genre/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/movie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/movie/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/review/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/review/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/search/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/signup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/signup/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
     </list>
@@ -26,8 +17,8 @@
       <file leaf-file-name="genre.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moviemania/views/genre.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-137">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="291">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -345,20 +336,34 @@
       <option name="project" value="LOCAL" />
       <updated>1531163638360</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Local Development final commit">
+      <created>1531241605333</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1531241605333</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Local Development final commit">
+      <created>1531241613636</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1531241613636</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3298969" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -394,7 +399,8 @@
     <MESSAGE value="Genre frontend commit" />
     <MESSAGE value="Search commit" />
     <MESSAGE value="Reviews commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reviews commit" />
+    <MESSAGE value="Local Development final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Local Development final commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -805,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/genre.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-137">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        <state relative-caret-position="291">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
