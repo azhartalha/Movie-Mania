@@ -10,7 +10,7 @@ class MoviesListComp extends Component{
     
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies?page=" + this.state.pg_no, {
+        fetch(this.props.server_url+"/MM_apis/movies?page=" + this.state.pg_no, {
            method: "get", 
         })
         .then( res => {
@@ -23,7 +23,7 @@ class MoviesListComp extends Component{
 
     nextPage()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies?page=" + (this.state.pg_no+1), {
+        fetch(this.props.server_url+"/MM_apis/movies?page=" + (this.state.pg_no+1), {
             method: "get", 
         })
         .then( res => {
@@ -40,7 +40,7 @@ class MoviesListComp extends Component{
     {
         if(this.state.pg_no <= 1)
             return;
-        fetch("http://127.0.0.1:8000/MM_apis/movies?page=" + (this.state.pg_no-1), {
+        fetch(this.props.server_url+"/MM_apis/movies?page=" + (this.state.pg_no-1), {
             method: "get", 
         })
         .then( res => {
@@ -105,7 +105,7 @@ class MoviesListComp extends Component{
                                 <div className="movie_card">
                                   {!movie.display_picture?<React.Fragment></React.Fragment>:
                                   <Link to={"/moviemania/movies_detailed/"+movie.id}>
-                                    <img src={"http://127.0.0.1:8000"+movie.display_picture} width="15%" height="60%" className="MM-img"/>
+                                    <img src={this.props.server_url+movie.display_picture} width="15%" height="60%" className="MM-img"/>
                                   </Link>}  
                                   <div className="moviecard-inner">
                                     {(this.state.pg_no - 1)*10 + index+1 }. <Link className="MM-link-dark" to={"/moviemania/movies_detailed/"+movie.id}><b>{movie.name }</b></Link>
@@ -185,7 +185,7 @@ class AddMovieComp extends Component{
         if(date)
             data.append("release_date", date);
 
-        fetch("http://127.0.0.1:8000/MM_apis/movies/create", {
+        fetch(this.props.server_url+"/MM_apis/movies/create", {
             method: "post",
             headers: {
                 'Accept': 'application/json',
@@ -287,7 +287,7 @@ class MovieDetailedComp extends Component{
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id, {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id, {
            method: "get"
         })
         .then( res => {
@@ -339,13 +339,13 @@ class MovieDetailedComp extends Component{
                             index%2?
                             <tr className="table-primary" key={"cast-movie"+cast.id}>
                                 <td>
-                                    <img src={"http://127.0.0.1:8000"+cast.display_picture} width="40px" height="60px"/>
+                                    <img src={this.props.server_url+cast.display_picture} width="40px" height="60px"/>
                                     <Link to={"/moviemania/celebs_detailed/"+cast.id} className="empty-div">{cast.name}</Link>
                                 </td>
                             </tr>:
                             <tr className="table-secondary" key={"cast-movie"+cast.id}>
                                 <td>
-                                    <img src={"http://127.0.0.1:8000"+cast.display_picture} width="40px" height="60px"/>
+                                    <img src={this.props.server_url+cast.display_picture} width="40px" height="60px"/>
                                     <Link to={"/moviemania/celebs_detailed/"+cast.id} className="empty-div">{cast.name}</Link>
                                 </td>
                             </tr>
@@ -374,7 +374,7 @@ class MovieDetailedComp extends Component{
                   {
                     !this.state.data.display_picture?<React.Fragment></React.Fragment>:
                     <div className="detail-media-div">
-                    <img src={"http://127.0.0.1:8000"+this.state.data.display_picture} width="200px" height="300px" className="alignleft"/>
+                    <img src={this.props.server_url+this.state.data.display_picture} width="200px" height="300px" className="alignleft"/>
                     {
                       !this.state.data.trailer?<React.Fragment></React.Fragment>:
                       <iframe width="400" height="300" src={"https://www.youtube.com/embed/"+this.state.data.trailer} frameBorder="0" allowFullScreen></iframe>
@@ -422,7 +422,7 @@ class UpdateMovieComp extends Component{
     
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies/"+this.state.movie_id , {
+        fetch(this.props.server_url+"/MM_apis/movies/"+this.state.movie_id , {
            method: "get",
            headers: {
             'Authorization': "JWT "+this.readCookie("JWT")
@@ -465,7 +465,7 @@ class UpdateMovieComp extends Component{
         if(date)
             data.append("born", date);
 
-        fetch("http://127.0.0.1:8000/MM_apis/movies/"+this.state.movie_id+"/update", {
+        fetch(this.props.server_url+"/MM_apis/movies/"+this.state.movie_id+"/update", {
             method: "put",
             headers: {
                 'Accept': 'application/json',
@@ -494,7 +494,7 @@ class UpdateMovieComp extends Component{
             alert("Name cannot be empty");
             return;
         }
-        fetch("http://127.0.0.1:8000/MM_apis/movies/"+this.state.movie_id+"/cast/"+name, {
+        fetch(this.props.server_url+"/MM_apis/movies/"+this.state.movie_id+"/cast/"+name, {
             method: "post",
             headers: {
                 'Accept': 'application/json',
@@ -521,7 +521,7 @@ class UpdateMovieComp extends Component{
             alert("Name cannot be empty");
             return;
         }
-        fetch("http://127.0.0.1:8000/MM_apis/movies/"+this.state.movie_id+"/cast/"+name, {
+        fetch(this.props.server_url+"/MM_apis/movies/"+this.state.movie_id+"/cast/"+name, {
             method: "delete",
             headers: {
                 'Accept': 'application/json',
@@ -548,7 +548,7 @@ class UpdateMovieComp extends Component{
             alert("Name cannot be empty");
             return;
         }
-        fetch("http://127.0.0.1:8000/MM_apis/movies/"+this.state.movie_id+"/genre/"+name, {
+        fetch(this.props.server_url+"/MM_apis/movies/"+this.state.movie_id+"/genre/"+name, {
             method: "post",
             headers: {
                 'Accept': 'application/json',
@@ -575,7 +575,7 @@ class UpdateMovieComp extends Component{
             alert("Name cannot be empty");
             return;
         }
-        fetch("http://127.0.0.1:8000/MM_apis/movies/"+this.state.movie_id+"/genre/"+name, {
+        fetch(this.props.server_url+"/MM_apis/movies/"+this.state.movie_id+"/genre/"+name, {
             method: "delete",
             headers: {
                 'Accept': 'application/json',

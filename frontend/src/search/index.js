@@ -13,7 +13,7 @@ class MovieSearchComp extends Component
     {
         if(prevProps.value!=this.props.value)
         {
-            fetch("http://127.0.0.1:8000/MM_apis/movie_search?page=1&name=" +this.props.value, {
+            fetch(this.props.server_url+"/MM_apis/movie_search?page=1&name=" +this.props.value, {
            method: "get", 
             })
             .then( res => {
@@ -27,7 +27,7 @@ class MovieSearchComp extends Component
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movie_search?page=" + this.state.pg_no+ "&name=" +this.props.value, {
+        fetch(this.props.server_url+"/MM_apis/movie_search?page=" + this.state.pg_no+ "&name=" +this.props.value, {
            method: "get", 
         })
         .then( res => {
@@ -40,7 +40,7 @@ class MovieSearchComp extends Component
 
     nextPage()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movie_search?page=" + this.state.pg_no+1+ "&name=" +this.props.value, {
+        fetch(this.props.server_url+"/MM_apis/movie_search?page=" + this.state.pg_no+1+ "&name=" +this.props.value, {
             method: "get", 
         })
         .then( res => {
@@ -57,7 +57,7 @@ class MovieSearchComp extends Component
     {
         if(this.state.pg_no <= 1)
             return;
-        fetch("http://127.0.0.1:8000/MM_apis/movie_search?page=" + this.state.pg_no-1+ "&name=" +this.props.value, {
+        fetch(this.props.server_url+"/MM_apis/movie_search?page=" + this.state.pg_no-1+ "&name=" +this.props.value, {
             method: "get", 
         })
         .then( res => {
@@ -118,7 +118,7 @@ class MovieSearchComp extends Component
                               <td>
                                 <div className="movie_card">
                                   <Link to={"/moviemania/movies_detailed/"+movie.id}>
-                                    <img src={"http://127.0.0.1:8000"+movie.display_picture} width="15%" height="60%" className="MM-img"/>
+                                    <img src={this.props.server_url+movie.display_picture} width="15%" height="60%" className="MM-img"/>
                                   </Link>  
                                   <div className="moviecard-inner">
                                     {(this.state.pg_no - 1)*10 + index+1 }. <Link className="MM-link-dark" to={"/moviemania/movies_detailed/"+movie.id}><b>{movie.name }</b></Link>
@@ -160,7 +160,7 @@ class CelebSearchComp extends Component
     {
         if(prevProps.value!=this.props.value)
         {
-            fetch("http://127.0.0.1:8000/MM_apis/cast_search?page=1&name=" +this.props.value, {
+            fetch(this.props.server_url+"/MM_apis/cast_search?page=1&name=" +this.props.value, {
            method: "get", 
             })
             .then( res => {
@@ -174,7 +174,7 @@ class CelebSearchComp extends Component
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/cast_search?page=" + this.state.pg_no+ "&name=" +this.props.value, {
+        fetch(this.props.server_url+"/MM_apis/cast_search?page=" + this.state.pg_no+ "&name=" +this.props.value, {
            method: "get", 
         })
         .then( res => {
@@ -187,7 +187,7 @@ class CelebSearchComp extends Component
 
     nextPage()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/cast_search?page=" + this.state.pg_no+1+ "&name=" +this.props.value, {
+        fetch(this.props.server_url+"/MM_apis/cast_search?page=" + this.state.pg_no+1+ "&name=" +this.props.value, {
             method: "get", 
         })
         .then( res => {
@@ -204,7 +204,7 @@ class CelebSearchComp extends Component
     {
         if(this.state.pg_no <= 1)
             return;
-        fetch("http://127.0.0.1:8000/MM_apis/cast_search?page=" + this.state.pg_no-1+ "&name=" +this.props.value, {
+        fetch(this.props.server_url+"/MM_apis/cast_search?page=" + this.state.pg_no-1+ "&name=" +this.props.value, {
             method: "get", 
         })
         .then( res => {
@@ -238,7 +238,7 @@ class CelebSearchComp extends Component
                                 {
                                     cast.display_picture==null?<React.Fragment></React.Fragment>:
                                     <Link to={"/moviemania/celebs_detailed/"+cast.id}>
-                                      <img src={"http://127.0.0.1:8000"+cast.display_picture} width="23%" height="90%" className="MM-img"/>
+                                      <img src={this.props.server_url+cast.display_picture} width="23%" height="90%" className="MM-img"/>
                                     </Link>
                                 }  
                                   <div className="castcard-inner">

@@ -10,7 +10,7 @@ class CastListComp extends Component{
     
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/cast?page=" + this.state.pg_no, {
+        fetch(this.props.server_url + "/MM_apis/cast?page=" + this.state.pg_no, {
            method: "get", 
         })
         .then( res => {
@@ -23,7 +23,7 @@ class CastListComp extends Component{
 
     nextPage()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/cast?page=" + (this.state.pg_no+1), {
+        fetch(this.props.server_url + "/MM_apis/cast?page=" + (this.state.pg_no+1), {
             method: "get", 
         })
         .then( res => {
@@ -40,7 +40,7 @@ class CastListComp extends Component{
     {
         if(this.state.pg_no <= 1)
             return;
-        fetch("http://127.0.0.1:8000/MM_apis/cast?page=" + (this.state.pg_no-1), {
+        fetch(this.props.server_url + "/MM_apis/cast?page=" + (this.state.pg_no-1), {
             method: "get", 
         })
         .then( res => {
@@ -74,7 +74,7 @@ class CastListComp extends Component{
                                 {
                                     cast.display_picture==null?<React.Fragment></React.Fragment>:
                                     <Link to={"/moviemania/celebs_detailed/"+cast.id}>
-                                      <img src={"http://127.0.0.1:8000"+cast.display_picture} width="23%" height="90%" className="MM-img"/>
+                                      <img src={this.props.server_url+cast.display_picture} width="23%" height="90%" className="MM-img"/>
                                     </Link>
                                 }  
                                   <div className="castcard-inner">
@@ -151,7 +151,7 @@ class AddCelebComp extends Component{
         if(date)
             data.append("born", date);
 
-        fetch("http://127.0.0.1:8000/MM_apis/cast/create", {
+        fetch(this.props.server_url+"/MM_apis/cast/create", {
             method: "post",
             headers: {
                 'Accept': 'application/json',
@@ -252,7 +252,7 @@ class UpdateCelebComp extends Component{
     
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/cast/"+this.state.cast_id , {
+        fetch(this.props.server_url + "/MM_apis/cast/"+this.state.cast_id , {
            method: "get",
            headers: {
             'Authorization': "JWT "+this.readCookie("JWT")
@@ -294,7 +294,7 @@ class UpdateCelebComp extends Component{
         if(date)
             data.append("born", date);
 
-        fetch("http://127.0.0.1:8000/MM_apis/cast/"+this.state.cast_id+"/update", {
+        fetch(this.props.server_url+"/MM_apis/cast/"+this.state.cast_id+"/update", {
             method: "put",
             headers: {
                 'Accept': 'application/json',
@@ -377,7 +377,7 @@ class CelebDetailedComp extends Component
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/cast/"+this.state.cast_id, {
+        fetch(this.props.server_url+"/MM_apis/cast/"+this.state.cast_id, {
             method: "get", 
         })
         .then( res => {
@@ -440,7 +440,7 @@ class CelebDetailedComp extends Component
                 <div className="detailed">
                   <hr/><h3>{this.state.data.name}</h3><hr/>
                   <div className="detail-media-div">
-                    <img src={"http://127.0.0.1:8000"+this.state.data.display_picture} className="alignleft" width="200" height="300"/>
+                    <img src={this.props.server_url+this.state.data.display_picture} className="alignleft" width="200" height="300"/>
                     <div>
                         <br/>
                         {this.state.data.description}

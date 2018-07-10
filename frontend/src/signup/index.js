@@ -32,7 +32,7 @@ class SignUpComp extends Component{
       login(){
         const name = document.getElementById("usernameField").value;
         const pass = document.getElementById("passwordField").value;
-        fetch('http://127.0.0.1:8000/api-token-auth/', {
+        fetch(this.props.server_url+'/api-token-auth/', {
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -49,7 +49,7 @@ class SignUpComp extends Component{
                 .then(response => {
                     this.createCookie("JWT", response.token, 1);
                     this.createCookie("username", name);
-                    fetch("http://127.0.0.1:8000/MM_apis/user_permissions", {headers: {
+                    fetch(this.props.server_url+"/MM_apis/user_permissions", {headers: {
                         'Authorization': "JWT "+response.token
                       }
                     })
@@ -94,7 +94,7 @@ class SignUpComp extends Component{
             return;
         }
         const data = { username: name, password: pass, email: email, first_name: first, last_name: last}
-        fetch("http://127.0.0.1:8000/MM_apis/signup", {
+        fetch(this.props.server_url+"/MM_apis/signup", {
                     method: 'post',
                     headers: {
                         'Accept': 'application/json',
@@ -111,7 +111,7 @@ class SignUpComp extends Component{
     }
     render(){
         return(
-        this.props.isLoggedIn?<Redirect to="moviemania/movies" />:
+        this.props.isLoggedIn?<Redirect to="/moviemania/movies"/>:
             <div className="MMlogin-form">
                 <input className="form-control mr-sm-2" type="text" id="usernameField" placeholder="Username *"/>
                 <input className="form-control mr-sm-2" type="password" id="passwordField" placeholder="Password *"/>

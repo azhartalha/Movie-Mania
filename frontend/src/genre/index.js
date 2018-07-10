@@ -62,7 +62,7 @@ class GenreDetailedComp extends Component
     
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/genre/" + this.state.genre_id + "?page=" + this.state.pg_no, {
+        fetch(this.props.server_url+"/MM_apis/genre/" + this.state.genre_id + "?page=" + this.state.pg_no, {
            method: "get", 
         })
         .then( res => {
@@ -75,14 +75,17 @@ class GenreDetailedComp extends Component
 
     componentDidUpdate(prevProps)
     {
+        
         if(prevProps.match.params.id!=this.props.match.params.id)
         {
-            fetch("http://127.0.0.1:8000/MM_apis/genre/" + this.props.match.params.id + "?page=1", {
+            console.log("I am called");
+            fetch(this.props.server_url+"/MM_apis/genre/" + this.props.match.params.id + "?page=1", {
                 method: "get", 
             })
             .then( res => {
                 res.json()
             .then(response =>{
+                console
                 this.setState({data: response, data_loaded: true, pg_no: 1, genre_id: this.props.match.params.id});
             })
             })    
@@ -91,13 +94,13 @@ class GenreDetailedComp extends Component
 
     nextPage()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no+1), {
+        fetch(this.props.server_url+"/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no+1), {
             method: "get", 
         })
         .then( res => {
             res.json()
         .then(response =>{
-            if(response.length ==0)
+            if(response.movies.length ==0)
                 return;
             this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no+1}));
         })
@@ -108,7 +111,7 @@ class GenreDetailedComp extends Component
     {
         if(this.state.pg_no <= 1)
             return;
-        fetch("http://127.0.0.1:8000/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no-1), {
+        fetch(this.props.server_url+"/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no-1), {
             method: "get", 
         })
         .then( res => {
@@ -180,7 +183,7 @@ class GenreDetailedComp extends Component
                               <td>
                                 <div className="movie_card">
                                   <Link to={"/moviemania/movies_detailed/"+movie.id}>
-                                    <img src={"http://127.0.0.1:8000"+movie.display_picture} width="15%" height="60%" className="MM-img"/>
+                                    <img src={this.props.server_url+movie.display_picture} width="15%" height="60%" className="MM-img"/>
                                   </Link>  
                                   <div className="moviecard-inner">
                                     {(this.state.pg_no - 1)*10 + index+1 }. <Link className="MM-link-dark" to={"/moviemania/movies_detailed/"+movie.id}><b>{movie.name }</b></Link>

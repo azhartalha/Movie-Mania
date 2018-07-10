@@ -26,7 +26,7 @@ class UserComp extends Component{
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/user_detailed", {
+        fetch( this.props.server_url + "/MM_apis/user_detailed", {
            method: "get",
            headers: {
             'Authorization': "JWT "+this.readCookie("JWT")
@@ -102,7 +102,7 @@ class UserUpdateComp extends Component{
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/user_detailed", {
+        fetch(this.props.server_url+ "/MM_apis/user_detailed", {
            method: "get",
            headers: {
             'Authorization': "JWT "+this.readCookie("JWT")
@@ -141,7 +141,7 @@ class UserUpdateComp extends Component{
             return;
         }
         const data = {password: pass, email: email, first_name: first, last_name: last}
-        fetch("http://127.0.0.1:8000/MM_apis/user_detailed", {
+        fetch(this.props.server_url + "/MM_apis/user_detailed", {
                     method: 'put',
                     headers: {
                         'Accept': 'application/json',

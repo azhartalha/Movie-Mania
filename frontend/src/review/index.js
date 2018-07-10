@@ -30,13 +30,13 @@ class ReviewList extends Component
     {
         var movie;
         var data;
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id, {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id, {
            method: "get", })
         .then( res => {
             res.json()
         .then(response =>{
         movie=response;
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no, {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no, {
         method: "get", })
         .then( res=> {
             res.json()
@@ -44,7 +44,7 @@ class ReviewList extends Component
             data=response;
             if(this.props.isLoggedIn)
             {
-                fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +"/user_review", {
+                fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/user_review", {
                     method: "get",
                     headers: {
                         'Accept': 'application/json',
@@ -70,7 +70,7 @@ class ReviewList extends Component
 
     nextPage()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no + 1, {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no + 1, {
         method: "get", })
         .then( res=> {
             res.json()
@@ -87,7 +87,7 @@ class ReviewList extends Component
         if(this.state.pg_no <= 1)
             return;
         
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no - 1, {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no - 1, {
         method: "get", })
         .then( res=> {
             res.json()
@@ -177,7 +177,7 @@ class ReviewList extends Component
                           <div className="movie_card">
                                   {!this.state.movie_data.display_picture?<React.Fragment></React.Fragment>:
                                   <Link to={"/moviemania/movies_detailed/"+this.state.movie_data.id}>
-                                    <img src={"http://127.0.0.1:8000"+this.state.movie_data.display_picture} width="15%" height="60%" className="MM-img"/>
+                                    <img src={this.props.server_url+this.state.movie_data.display_picture} width="15%" height="60%" className="MM-img"/>
                                   </Link>}  
                                   <div className="moviecard-inner">
                                     <Link className="MM-link-dark" to={"/moviemania/movies_detailed/"+this.state.movie_data.id}><b>{this.state.movie_data.name }</b></Link>
@@ -266,7 +266,7 @@ class CreateReviewComp extends Component
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +"/user_review", {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/user_review", {
             method: "get",
             headers: {
                 'Accept': 'application/json',
@@ -325,7 +325,7 @@ class CreateReviewComp extends Component
        
         var data ={"rating": rating, "description": description, date: today}
         
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +'/reviews/create', {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +'/reviews/create', {
                     method: 'post',
                     headers: {
                         'Accept': 'application/json',
@@ -388,7 +388,7 @@ class EditReviewComp extends Component
 
     componentDidMount()
     {
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +"/user_review", {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/user_review", {
             method: "get",
             headers: {
                 'Accept': 'application/json',
@@ -450,7 +450,7 @@ class EditReviewComp extends Component
        
         var data ={"rating": rating, "description": description, date: today}
         
-        fetch("http://127.0.0.1:8000/MM_apis/movies/" + this.state.movie_id +'/user_review/update', {
+        fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +'/user_review/update', {
                     method: 'put',
                     headers: {
                         'Accept': 'application/json',
