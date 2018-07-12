@@ -16,6 +16,9 @@ class ReviewApi(APIView):
 
         page_no -= 1
 
+        if page_no < 0:
+            page_no = 0
+
         movie = get_object_or_404(Movie, pk=movie_id)
         reviews = Review.objects.filter(movie=movie).order_by("description").order_by("date")[page_no*10: page_no*10+10]
         serializer = ReviewSerializer(reviews, many=True)

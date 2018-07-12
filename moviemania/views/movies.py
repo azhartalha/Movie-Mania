@@ -22,6 +22,9 @@ class MovieApi(APIView):
             page_no = int(request.query_params['page'])
 
         page_no -= 1
+
+        if page_no < 0:
+            page_no = 0
         """
             Getting the sorted list of movies based on their average rating
             if the average ratings are same then the total number of votes will be considered
@@ -119,6 +122,9 @@ class MovieSearch(APIView):
             page_no = int(request.query_params['page'])
 
         page_no -= 1
+
+        if page_no < 0:
+            page_no = 0
 
         movies = Movie.objects.filter(name__icontains=name)[page_no*10: (page_no + 1)*10]
 

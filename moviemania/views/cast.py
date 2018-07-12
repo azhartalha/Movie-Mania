@@ -17,6 +17,9 @@ class CastApi(APIView):
 
         page_no -= 1
 
+        if page_no < 0:
+            page_no = 0
+
         casts = Cast.objects.all()[page_no * 10:page_no * 10 + 10]
         serializer = CastSerializer(casts, many=True)
         return Response(serializer.data)
@@ -83,6 +86,9 @@ class CastSearch(APIView):
             page_no = int(request.query_params['page'])
 
         page_no -= 1
+
+        if page_no < 0:
+            page_no = 0
 
         cast = Cast.objects.filter(name__icontains=name)[page_no * 10: (page_no + 1) * 10]
 

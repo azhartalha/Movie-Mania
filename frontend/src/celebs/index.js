@@ -140,7 +140,11 @@ class AddCelebComp extends Component{
             alert("The file is too large");
             return;
         }
-        
+        if(description.length>=256)
+        {
+            alert("The description is too large");
+            return;            
+        }
         var data = new FormData();
         data.append('name', name);
         data.append('description', description);
@@ -283,7 +287,11 @@ class UpdateCelebComp extends Component{
             alert("The file is too large");
             return;
         }
-        
+        if(description.length>=256)
+        {
+            alert("The description is too large");
+            return;            
+        }
         var data = new FormData();
         data.append('name', name);
         data.append('description', description);

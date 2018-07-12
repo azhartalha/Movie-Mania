@@ -173,7 +173,12 @@ class AddMovieComp extends Component{
             alert("The file is too large");
             return;
         }
-        
+        if(description.length>=256)
+        {
+            alert("The description is too large");
+            return;            
+        }
+        alert("creating mvoie, you will be redirected to the movie page once the movie is created.");
         var data = new FormData();
         data.append('name', name);
         data.append('description', description);
@@ -454,7 +459,11 @@ class UpdateMovieComp extends Component{
             alert("The file is too large");
             return;
         }
-        
+        if(description.length>=256)
+        {
+            alert("The description is too large");
+            return;            
+        }
         var data = new FormData();
         data.append('name', name);
         data.append('description', description);

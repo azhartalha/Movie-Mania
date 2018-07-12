@@ -40,6 +40,10 @@ class GenreDetailed(APIView):
         if 'page' in request.query_params:
             page_no = int(request.query_params['page'])
         page_no -= 1
+
+        if page_no < 0:
+            page_no = 0
+
         res = GenreSerializer(genre).data
 
         sorted_movies = genre.movie_set.all().annotate(reviewsCount=Count('id'), avgRating=Avg(

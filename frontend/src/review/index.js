@@ -308,6 +308,11 @@ class CreateReviewComp extends Component
     {
         var rating = this.state.star_rating;
         var description = document.getElementById("description_field").value;
+        if(description.length>=524)
+        {
+            alert("The description is too large");
+            return;            
+        }
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0!
@@ -433,6 +438,11 @@ class EditReviewComp extends Component
     {
         var rating = this.state.star_rating;
         var description = document.getElementById("description_field").value;
+        if(description.length>=524)
+        {
+            alert("The description is too large");
+            return;            
+        }
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; 
