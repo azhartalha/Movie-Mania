@@ -10,7 +10,7 @@
 .header-center {
   position: relative;
   top: 0;
-  left: 35%;
+  left: 350px;
 }
 
 .header {
@@ -20,19 +20,22 @@
 }
 
 .header-center-bottom{
-  position: relative;
-  left: 5%;
+  position: absolute;
+  top: 50px;
+  width: 300px;
 }
+
 
 .header-right{
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 5%;
 }
 
 .App{
   width: 1000px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:0 auto;
 }
 
 .jumbotron{
