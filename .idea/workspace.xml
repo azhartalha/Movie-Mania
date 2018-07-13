@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="making frontend mobile compatible">
+    <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.bf69edd2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.bf69edd2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack-stats.prod.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.prod.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,10 +44,22 @@
       <file leaf-file-name="movies.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="395">
               <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="permissions.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/moviemania/permissions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -60,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="249">
+              <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
               </folding>
@@ -98,6 +115,7 @@
     <findStrings>
       <find>webpack</find>
       <find>webpack-bundle</find>
+      <find>deb</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -351,7 +369,21 @@
       <option name="project" value="LOCAL" />
       <updated>1531503160518</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="making frontend mobile compatible">
+      <created>1531509987185</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1531509987185</updated>
+    </task>
+    <task id="LOCAL-00020" summary="making frontend mobile compatible">
+      <created>1531510584466</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1531510584466</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -365,7 +397,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2247191" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
@@ -373,9 +404,9 @@
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.29749632" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29749632" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -688,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/permissions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/config/webpack.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -764,16 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/reviews.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -786,10 +800,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+        <state relative-caret-position="249">
+          <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
           <folding>
             <element signature="e#308#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/permissions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

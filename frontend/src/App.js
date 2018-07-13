@@ -15,7 +15,7 @@ class App extends Component {
   constructor(props)
   {
     super(props);
-    this.state = {isLoggedIn: false, username: "", isStaff: "", server_url: "http://127.0.0.1:8000"};
+    this.state = {isLoggedIn: false, username: "", isStaff: "", server_url: "http://ec2-13-58-202-148.us-east-2.compute.amazonaws.com:8000"};
   }
   
   readCookie(name) {
