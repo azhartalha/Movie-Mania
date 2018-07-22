@@ -86,7 +86,7 @@ class MMHeader extends Component{
                     </div>
                     <div className="header-center-bottom">
                         <span>
-                                <Link style={link_style} to="/moviemania/">Home</Link>
+                                <Link style={link_style} to="/moviemania/">About</Link>
                         </span>
                         <span>
                                 <Link style={link_style} to="/moviemania/movies">Movies</Link>
