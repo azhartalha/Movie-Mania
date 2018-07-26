@@ -30,8 +30,7 @@ class MovieApi(APIView):
             if the average ratings are same then the total number of votes will be considered
         """
         movies = Movie.objects.all().annotate(reviewsCount=Count('id'), avgRating=Avg(
-            "review__rating")).order_by("reviewsCount").order_by("-avgRating")[page_no * 10:page_no * 10 + 10]
-
+            "review__rating")).order_by("-avgRating", "-reviewsCount")[page_no * 10:page_no * 10 + 10]
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data)
 

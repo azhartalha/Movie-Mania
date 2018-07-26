@@ -40,6 +40,7 @@ class MovieSearchComp extends Component
 
     nextPage()
     {
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/movie_search?page=" + this.state.pg_no+1+ "&name=" +this.props.value, {
             method: "get", 
         })
@@ -49,7 +50,7 @@ class MovieSearchComp extends Component
             if(response.length ==0)
                 return;
             this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no+1}));
-        })
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
@@ -57,14 +58,15 @@ class MovieSearchComp extends Component
     {
         if(this.state.pg_no <= 1)
             return;
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/movie_search?page=" + this.state.pg_no-1+ "&name=" +this.props.value, {
             method: "get", 
         })
         .then( res => {
             res.json()
         .then(response =>{
-            this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no-1}));
-        })
+            this.setState(prev => ({data: response, pg_no: prev.pg_no-1,  data_loaded: true}));
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
@@ -103,7 +105,7 @@ class MovieSearchComp extends Component
     render(){
         return(
             !this.state.data_loaded?
-                <p>Loading...</p>:
+            <div class="loader"></div>:
                 <div>
                     <div className="MM-page-header">
                         <button type="button" className="btn btn-info" id="MM-prev-btn" onClick={() => this.prevPage()}>prev</button>
@@ -187,6 +189,7 @@ class CelebSearchComp extends Component
 
     nextPage()
     {
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/cast_search?page=" + this.state.pg_no+1+ "&name=" +this.props.value, {
             method: "get", 
         })
@@ -196,7 +199,7 @@ class CelebSearchComp extends Component
             if(response.length ==0)
                 return;
             this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no+1}));
-        })
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
@@ -204,6 +207,7 @@ class CelebSearchComp extends Component
     {
         if(this.state.pg_no <= 1)
             return;
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/cast_search?page=" + this.state.pg_no-1+ "&name=" +this.props.value, {
             method: "get", 
         })
@@ -211,14 +215,14 @@ class CelebSearchComp extends Component
             res.json()
         .then(response =>{
             this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no-1}));
-        })
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
     render(){
         return(
             !this.state.data_loaded?
-                <p>Loading...</p>:
+            <div class="loader"></div>:
                 <div>
                     <div className="MM-page-header">
                         <button type="button" className="btn btn-info" id="MM-prev-btn" onClick={() => this.prevPage()}>prev</button>
@@ -307,7 +311,7 @@ class SearchComp extends Component
     render()
     {
         if(!this.state.query_parsed)
-            return <p>Loading...</p>
+            return <div class="loader"></div>
         if(this.state.type!="movie" && this.state.type!="celeb")
             return <p>Search Query must contain type and it either can be movie or celeb</p>
         if(this.state.value=="")

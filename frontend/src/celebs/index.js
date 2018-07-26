@@ -23,6 +23,7 @@ class CastListComp extends Component{
 
     nextPage()
     {
+        this.setState({data_loaded: false});
         fetch(this.props.server_url + "/MM_apis/cast?page=" + (this.state.pg_no+1), {
             method: "get", 
         })
@@ -31,8 +32,8 @@ class CastListComp extends Component{
         .then(response =>{
             if(response.length ==0)
                 return;
-            this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no+1}));
-        })
+            this.setState(prev => ({data: response, pg_no: prev.pg_no+1}));
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
@@ -40,21 +41,22 @@ class CastListComp extends Component{
     {
         if(this.state.pg_no <= 1)
             return;
+        this.setState({data_loaded: false});
         fetch(this.props.server_url + "/MM_apis/cast?page=" + (this.state.pg_no-1), {
             method: "get", 
         })
         .then( res => {
             res.json()
         .then(response =>{
-            this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no-1}));
-        })
+            this.setState(prev => ({data: response, pg_no: prev.pg_no-1}));
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
     render(){
         return(
             !this.state.data_loaded?
-                <p>Loading...</p>:
+            <div class="loader"></div>:
                 <div>
                     <div className="MM-page-header">
                         <button type="button" className="btn btn-info" id="MM-prev-btn" onClick={() => this.prevPage()}>prev</button>
@@ -437,7 +439,7 @@ class CelebDetailedComp extends Component
     render()
     {
         return(
-            !this.state.data_loaded? <p>Loading...</p>:
+            !this.state.data_loaded? <div class="loader"></div>:
             <div>
                 {
                     this.props.isStaff!=1?<React.Fragment></React.Fragment>: 

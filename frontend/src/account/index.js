@@ -45,7 +45,7 @@ class UserComp extends Component{
         if(this.props.isLoggedIn)
         return(
             !this.state.data_loaded?
-                <p>Loading...</p>:
+            <div class="loader"></div>:
                 <table className="table table-hover">
                    <tbody>
                     <tr>
@@ -165,7 +165,7 @@ class UserUpdateComp extends Component{
         if(this.props.isLoggedIn)
         return(
             !this.state.data_loaded?
-                <p>Loading...</p>:
+            <div class="loader"></div>:
                 <div>
                 <table className="table table-hover">
                     <tbody>

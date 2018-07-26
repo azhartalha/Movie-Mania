@@ -94,6 +94,7 @@ class GenreDetailedComp extends Component
 
     nextPage()
     {
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no+1), {
             method: "get", 
         })
@@ -103,12 +104,13 @@ class GenreDetailedComp extends Component
             if(response.movies.length ==0)
                 return;
             this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no+1}));
-        })
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
     prevPage()
     {
+        this.setState({data_loaded: false});
         if(this.state.pg_no <= 1)
             return;
         fetch(this.props.server_url+"/MM_apis/genre/" + this.state.genre_id + "?page=" + (this.state.pg_no-1), {
@@ -118,7 +120,7 @@ class GenreDetailedComp extends Component
             res.json()
         .then(response =>{
             this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no-1}));
-        })
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
@@ -163,7 +165,7 @@ class GenreDetailedComp extends Component
         }
         return(
             !this.state.data_loaded?
-                <p>Loading...</p>:
+            <div class="loader"></div>:
                 <div>
                     <div style={headStyle}>
                         <h3>

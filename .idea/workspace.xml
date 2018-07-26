@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapps/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webapps/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/account/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/account/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/celebs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/celebs/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/genre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/genre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/movie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/movie/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/review/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/review/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/moviemania/views/movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviemania/views/movies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="movies.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="movies.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="187">
+              <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -66,7 +71,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="374">
               <caret line="24" column="22" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="22" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -87,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+            <state relative-caret-position="254">
+              <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
               </folding>
@@ -150,11 +155,11 @@
         <option value="$PROJECT_DIR$/webapps/production_settings.py" />
         <option value="$PROJECT_DIR$/frontend/config/paths.js" />
         <option value="$PROJECT_DIR$/frontend/config/webpack.config.prod.js" />
-        <option value="$PROJECT_DIR$/moviemania/views/movies.py" />
         <option value="$PROJECT_DIR$/moviemania/views/genre.py" />
         <option value="$PROJECT_DIR$/moviemania/views/cast.py" />
         <option value="$PROJECT_DIR$/moviemania/views/reviews.py" />
         <option value="$PROJECT_DIR$/webapps/settings.py" />
+        <option value="$PROJECT_DIR$/moviemania/views/movies.py" />
       </list>
     </option>
   </component>
@@ -170,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,7 +203,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -400,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531511195395</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="About page change and url change">
+      <created>1532243172466</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1532243172466</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -414,16 +426,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2247191" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2247191" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.29749632" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29749632" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -464,11 +475,12 @@
     <MESSAGE value="pagination additional checks and description frontend validation" />
     <MESSAGE value="making frontend mobile compatible" />
     <MESSAGE value="Production level final commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Production level final commit" />
+    <MESSAGE value="About page change and url change" />
+    <option name="LAST_COMMIT_MESSAGE" value="About page change and url change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="64" />
+      <option name="time" value="66" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -795,16 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/views/cast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/genre.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -816,16 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -844,7 +836,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="374">
           <caret line="24" column="22" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="22" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -854,10 +846,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+        <state relative-caret-position="254">
+          <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
           <folding>
             <element signature="e#308#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/views/cast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
           </folding>
         </state>
       </provider>

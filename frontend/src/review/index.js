@@ -70,6 +70,7 @@ class ReviewList extends Component
 
     nextPage()
     {
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no + 1, {
         method: "get", })
         .then( res=> {
@@ -77,23 +78,23 @@ class ReviewList extends Component
         .then(response =>{
             if(response.length == 0)
                 return;
-            this.setState(prev => ({data: response, data_loaded: true, pg_no: prev.pg_no + 1}));
-        })
+            this.setState(prev => ({data: response, pg_no: prev.pg_no + 1}));
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
     prevPage()
-    {
+    {   
         if(this.state.pg_no <= 1)
             return;
-        
+        this.setState({data_loaded: false});
         fetch(this.props.server_url+"/MM_apis/movies/" + this.state.movie_id +"/reviews?page="+ this.state.pg_no - 1, {
         method: "get", })
         .then( res=> {
             res.json()
         .then(response =>{
-            this.setState(prev =>({data: response, data_loaded: true, pg_no: prev.pg_no - 1}));
-        })
+            this.setState(prev =>({data: response, pg_no: prev.pg_no - 1}));
+        }).then(()=>(this.setState({data_loaded: true})))
         })
     }
 
@@ -168,7 +169,7 @@ class ReviewList extends Component
     render(){
         return(
             !this.state.data_loaded?
-            <p>Loading..</p>:
+            <div class="loader"></div>:
             <div>
                 <table className="table">
                   <tbody>
@@ -346,7 +347,7 @@ class CreateReviewComp extends Component
         if(this.state.reviewed || !this.props.isLoggedIn)
             return (<Redirect to={"/moviemania/reviews/"+this.state.movie_id} />);
         return(
-            !this.state.data_loaded? <p>Loading...</p>:
+            !this.state.data_loaded? <div class="loader"></div>:
             <div>
                 <table className="table table-hover">
                     <tbody>
@@ -482,7 +483,7 @@ class EditReviewComp extends Component
         if(!this.state.reviewed || !this.props.isLoggedIn)
             return (<Redirect to={"/moviemania/reviews/"+this.state.movie_id} />);
         return(
-            !this.state.data_loaded? <p>Loading...</p>:
+            !this.state.data_loaded? <div class="loader"></div>:
             <div>
                 <table className="table table-hover">
                     <tbody>
