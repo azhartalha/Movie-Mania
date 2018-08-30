@@ -17,12 +17,17 @@ class HomeComp extends Component
              position: "absolute",
              top: "25%",
              left: "0%",
-            width: "550px",
+            width: "560px",
             color: "navy",
-            fontFamily: "Courier New"
+            fontSize: "16px",
         }
         var ancor = {
             color: "red"
+        }
+        
+        var myImg = {
+            borderRadius: "50%",
+            marginBottom: "10px"
         }
 
         return(
@@ -32,12 +37,12 @@ class HomeComp extends Component
                     <hr/>
                 </div>
                 <div className="alignright">
-                    <img src="https://media.licdn.com/dms/image/C5103AQGN6oetOrl2Dg/profile-displayphoto-shrink_200_200/0?e=1535587200&v=beta&t=jM-NNiui4NrdsIOFUHN5Xxhv6H5L2wXqzuwfXOWZXa8"/>
+                    <img style={myImg} src="https://scontent.fhyd1-2.fna.fbcdn.net/v/t1.0-9/40006407_1913132192109890_7333126001825677312_n.jpg?_nc_cat=0&oh=5a7f399b71f20025139a3dd6a5f7264c&oe=5C3358E5" width="150px" height="150px"/>
                     <br/>
                     <p ><a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed"><i>~Azhar Talha Syed~</i></a></p>
                 </div>
                 <div style={leftCont}>
-                    Hello I am Azhar, the founder and developer of MovieMania. MovieMania is a clone of IMDB which is a website where
+                    Hello I am <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">Azhar</a>, the founder and developer of MovieMania. MovieMania is a clone of IMDB which is a website where
                     people can find all the data related to movies and review them. This is a single page webapp buit using
                     React.js and django-rest framework. There are three types of users Admin, staff and a normal user, if you want to have the 
                     staff permissions please message me your username of the account that you have created in moviemania on linkedIn, you will be able to add movies/celebs, update movies/celebs and add celebs/genres to movie etc.. Basically all

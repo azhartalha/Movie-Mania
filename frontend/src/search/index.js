@@ -105,7 +105,7 @@ class MovieSearchComp extends Component
     render(){
         return(
             !this.state.data_loaded?
-            <div class="loader"></div>:
+            <div className="loader"></div>:
                 <div>
                     <div className="MM-page-header">
                         <button type="button" className="btn btn-info" id="MM-prev-btn" onClick={() => this.prevPage()}>prev</button>
@@ -222,7 +222,7 @@ class CelebSearchComp extends Component
     render(){
         return(
             !this.state.data_loaded?
-            <div class="loader"></div>:
+            <div className="loader"></div>:
                 <div>
                     <div className="MM-page-header">
                         <button type="button" className="btn btn-info" id="MM-prev-btn" onClick={() => this.prevPage()}>prev</button>
@@ -311,7 +311,7 @@ class SearchComp extends Component
     render()
     {
         if(!this.state.query_parsed)
-            return <div class="loader"></div>
+            return <div className="loader"></div>
         if(this.state.type!="movie" && this.state.type!="celeb")
             return <p>Search Query must contain type and it either can be movie or celeb</p>
         if(this.state.value=="")

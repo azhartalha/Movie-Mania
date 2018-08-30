@@ -165,7 +165,7 @@ class GenreDetailedComp extends Component
         }
         return(
             !this.state.data_loaded?
-            <div class="loader"></div>:
+            <div className="loader"></div>:
                 <div>
                     <div style={headStyle}>
                         <h3>

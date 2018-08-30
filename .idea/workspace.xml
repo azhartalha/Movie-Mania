@@ -3,16 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/account/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/account/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.48a8b98d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.48a8b98d.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/service-worker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/celebs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/celebs/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/genre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/genre/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/movie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/movie/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/review/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/review/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moviemania/views/movies.py" beforeDir="false" afterPath="$PROJECT_DIR$/moviemania/views/movies.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack-stats.prod.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.prod.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +50,8 @@
       <file leaf-file-name="movies.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+            <state relative-caret-position="340">
+              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -95,7 +98,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapps/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="612">
               <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
               <folding>
                 <element signature="e#308#317#0" expanded="true" />
@@ -164,10 +167,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="85" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
+    <option name="x" value="240" />
+    <option name="y" value="125" />
+    <option name="width" value="1440" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -207,7 +210,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$USER_HOME$/onlineproject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -412,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532243172466</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="pagination fix, loading css, movie list api fix">
+      <created>1532596196353</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1532596196353</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -476,7 +486,8 @@
     <MESSAGE value="making frontend mobile compatible" />
     <MESSAGE value="Production level final commit" />
     <MESSAGE value="About page change and url change" />
-    <option name="LAST_COMMIT_MESSAGE" value="About page change and url change" />
+    <MESSAGE value="pagination fix, loading css, movie list api fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination fix, loading css, movie list api fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -846,7 +857,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webapps/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="612">
           <caret line="37" column="63" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
           <folding>
             <element signature="e#308#317#0" expanded="true" />
@@ -866,8 +877,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        <state relative-caret-position="340">
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>

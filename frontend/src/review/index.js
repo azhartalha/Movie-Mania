@@ -169,7 +169,7 @@ class ReviewList extends Component
     render(){
         return(
             !this.state.data_loaded?
-            <div class="loader"></div>:
+            <div className="loader"></div>:
             <div>
                 <table className="table">
                   <tbody>
@@ -347,7 +347,7 @@ class CreateReviewComp extends Component
         if(this.state.reviewed || !this.props.isLoggedIn)
             return (<Redirect to={"/moviemania/reviews/"+this.state.movie_id} />);
         return(
-            !this.state.data_loaded? <div class="loader"></div>:
+            !this.state.data_loaded? <div className="loader"></div>:
             <div>
                 <table className="table table-hover">
                     <tbody>
@@ -483,7 +483,7 @@ class EditReviewComp extends Component
         if(!this.state.reviewed || !this.props.isLoggedIn)
             return (<Redirect to={"/moviemania/reviews/"+this.state.movie_id} />);
         return(
-            !this.state.data_loaded? <div class="loader"></div>:
+            !this.state.data_loaded? <div className="loader"></div>:
             <div>
                 <table className="table table-hover">
                     <tbody>

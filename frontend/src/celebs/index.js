@@ -56,7 +56,7 @@ class CastListComp extends Component{
     render(){
         return(
             !this.state.data_loaded?
-            <div class="loader"></div>:
+            <div className="loader"></div>:
                 <div>
                     <div className="MM-page-header">
                         <button type="button" className="btn btn-info" id="MM-prev-btn" onClick={() => this.prevPage()}>prev</button>
@@ -439,7 +439,7 @@ class CelebDetailedComp extends Component
     render()
     {
         return(
-            !this.state.data_loaded? <div class="loader"></div>:
+            !this.state.data_loaded? <div className="loader"></div>:
             <div>
                 {
                     this.props.isStaff!=1?<React.Fragment></React.Fragment>: 
