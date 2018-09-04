@@ -1,7 +1,7 @@
 .Title {
   position: absolute;
   color: #5C8EF2;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 35px;
   left: 5%;
   top: 5%;
@@ -10,7 +10,7 @@
 .header-center {
   position: relative;
   top: 0;
-  left: 350px;
+  left: 340px;
 }
 
 .header {

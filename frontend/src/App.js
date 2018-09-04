@@ -53,7 +53,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <MMHeader title="MOVIEMANIA" server_url={this.state.server_url} isLoggedIn={this.state.isLoggedIn} username={this.state.username} setLoginStatus={this.setLoginStatus}/>
+          <MMHeader title="MovieMania" server_url={this.state.server_url} isLoggedIn={this.state.isLoggedIn} username={this.state.username} setLoginStatus={this.setLoginStatus}/>
           <div className="jumbotron">    
             <Route exact path="/moviemania"  component={args => <HomeComp server_url={this.state.server_url}/>} />
             <Route exact path="/moviemania/login" component={args => <LoginClass server_url={this.state.server_url} isLoggedIn={this.state.isLoggedIn} setLoginStatus={this.setLoginStatus}{...args}/>} />

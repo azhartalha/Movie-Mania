@@ -3,19 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bundles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.48a8b98d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.48a8b98d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bundles/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/celebs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/celebs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/genre/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/genre/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/movie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/movie/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/review/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/review/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/search/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack-stats.prod.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.prod.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -178,7 +169,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,6 +196,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532596196353</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="about page change">
+      <created>1535656899299</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1535656899299</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -487,7 +485,8 @@
     <MESSAGE value="Production level final commit" />
     <MESSAGE value="About page change and url change" />
     <MESSAGE value="pagination fix, loading css, movie list api fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination fix, loading css, movie list api fix" />
+    <MESSAGE value="about page change" />
+    <option name="LAST_COMMIT_MESSAGE" value="about page change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
