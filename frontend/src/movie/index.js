@@ -181,7 +181,7 @@ class AddMovieComp extends Component{
             alert("The description is too large");
             return;            
         }
-        alert("creating mvoie, you will be redirected to the movie page once the movie is created.");
+        alert("creating the new movie, you will be redirected to the movie page once the movie is created.");
         var data = new FormData();
         data.append('name', name);
         data.append('description', description);

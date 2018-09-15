@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="UI changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack-stats.prod.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.prod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/css/main.55ac948d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/css/main.55ac948d.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/js/main.2272a3dc.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/js/main.2272a3dc.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bundles/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bundles/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/movie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/movie/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +46,8 @@
       <file leaf-file-name="movies.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+            <state relative-caret-position="135">
+              <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -168,6 +174,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -195,7 +202,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536089630500</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="UI changes">
+      <created>1536090291667</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1536090291667</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -883,8 +896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moviemania/views/movies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
+        <state relative-caret-position="135">
+          <caret line="33" column="55" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
