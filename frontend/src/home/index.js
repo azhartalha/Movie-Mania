@@ -8,12 +8,7 @@ class HomeComp extends Component
             width: "800px",
             height: "700px",
             position: "relative",
-            // backgroundColor: "Navy",
             borderRadius: "15px",
-            // borderColor: "navy",
-            // borderStyle: "solid",
-            // padding: "20px",
-            // color: "white"
         };
 
         var headerContainer = {
