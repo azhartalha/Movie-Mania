@@ -6,8 +6,14 @@ class HomeComp extends Component
     {
         var container = {
             width: "800px",
-            height: "600px",
-            position: "relative"
+            height: "700px",
+            position: "relative",
+            // backgroundColor: "Navy",
+            borderRadius: "15px",
+            // borderColor: "navy",
+            // borderStyle: "solid",
+            // padding: "20px",
+            // color: "white"
         };
 
         var headerContainer = {
@@ -22,12 +28,12 @@ class HomeComp extends Component
             textAlign: "left"
         }
         var ancor = {
-            color: "red"
+            color: "blue"
         }
         
         var myImg = {
             borderRadius: "50%",
-            marginBottom: "10px"
+            margin: "10px"
         }
 
         var my_margin = {
@@ -48,20 +54,20 @@ class HomeComp extends Component
                 <div style={leftCont}>
                 <ul>
                     <li style={my_margin}>Hello I am <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">Azhar</a>, the founder and developer of MovieMania. 
-                    </li><li style={my_margin}>MovieMania is a clone of IMDB where
+                    </li><li style={my_margin}><p>MovieMania is a clone of IMDB where
                     people can find all the data related to movies and review them.
-                    </li><li style={my_margin}> MovieMania is a single page full stack webapp built using
-                    React.js and django-rest framework. 
-                    </li><li style={my_margin}>There are three types of users in MovieMaina: Admin, staff and a general user. Each having a specific set of permissions to access pages of the webapp. Which means a person without a permission for a page will not be given an access.</li><li>
-                         A staff user will have permissions to add movies/celebs, update movies/celebs and add celebs/genres to movie etc. Basically can perform all
-                    the CURD operations. 
+                    </p></li><li style={my_margin}> <p>MovieMania is a single page full stack webapp built using
+                    React.js and django-rest framework.</p> 
+                    </li><li style={my_margin}><p>There are three types of users in MovieMaina: Admin, staff and a general user. Each having a specific set of permissions to access pages of the webapp. Which means a person without a permission for a page will not be given an access.</p></li><li>
+                    <p> A staff user will have permissions to add movies/celebs, update movies/celebs and add celebs/genres to movie etc. Basically can perform all
+                    the CRUD operations. 
                     If you want to have the 
-                    staff permissions please message me your username of the account that you have created in moviemania to my <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">linkedIn</a>.
-                    </li><li style={my_margin}>As general user he/she will be able to update the profile, change password and add reviews to the movies, review section will be found at the bottom of every movie page. 
-                    </li><li style={my_margin}>The main agenda of building this application was to develop a full stack
-                    webapp by myself and get proficient at the mentioned frameworks.</li><li style={my_margin}> Here is the link to the <a style={ancor} href="https://github.com/azhartalha/Movie-Mania">GitHub repo</a> of the website
+                    staff permissions please message me your username of the account that you have created in moviemania to my <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">linkedIn</a>.</p>
+                    </li><li style={my_margin}><p>As general user he/she will be able to update the profile, change password and add reviews to the movies, review section will be found at the bottom of every movie page. 
+                    </p></li><li style={my_margin}><p>The main agenda of building this application was to develop a full stack
+                    webapp by myself and get proficient at the mentioned frameworks.</p></li><li style={my_margin}><p> Here is the link to the <a style={ancor} href="https://github.com/azhartalha/Movie-Mania">GitHub repo</a> of the website
                     walk throught the code and use the website if you are intrested. :)
-                </li>
+                </p ></li>
                 </ul>
                 </div>
             </div>

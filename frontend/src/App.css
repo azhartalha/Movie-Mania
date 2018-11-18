@@ -1,10 +1,10 @@
 .Title {
   position: absolute;
   color: rgb(94, 138, 226);
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman';
   font-size: 35px;
   left: 5%;
-  top: 5%;
+  top: 10%;
 }
 
 .header-center {
