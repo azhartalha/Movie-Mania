@@ -460,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542564448689</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="About page change">
+      <created>1542564781631</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1542564781631</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -528,7 +535,8 @@
     <MESSAGE value="about page change" />
     <MESSAGE value="About page changes" />
     <MESSAGE value="UI changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI changes" />
+    <MESSAGE value="About page change" />
+    <option name="LAST_COMMIT_MESSAGE" value="About page change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
