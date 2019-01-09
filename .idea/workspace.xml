@@ -4,7 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/moviemania/views/movies.py" line="51" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="" />
+    <list default="true" id="e807afb1-a4f3-48a8-a421-cc0f1708a181" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack-stats.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/webpack-stats.dev.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,7 +192,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1542564781631</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Read me update">
+      <created>1543421242159</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1543421242159</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -485,13 +496,13 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16523464" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3298969" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3298969" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20176731" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39911634" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -536,7 +547,8 @@
     <MESSAGE value="About page changes" />
     <MESSAGE value="UI changes" />
     <MESSAGE value="About page change" />
-    <option name="LAST_COMMIT_MESSAGE" value="About page change" />
+    <MESSAGE value="Read me update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Read me update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

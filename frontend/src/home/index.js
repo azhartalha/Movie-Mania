@@ -6,7 +6,7 @@ class HomeComp extends Component
     {
         var container = {
             width: "800px",
-            height: "700px",
+            height: "610px",
             position: "relative",
             borderRadius: "15px",
         };
@@ -15,10 +15,8 @@ class HomeComp extends Component
             padding: "0px 20px 20px 20px"
         };
          var leftCont = {
-             position: "absolute",
-             top: "16%",
-             left: "0%",
-            width: "580px",
+            top: "16%",
+            width: "700px",
             fontSize: "15px",
             textAlign: "left"
         }
@@ -32,7 +30,7 @@ class HomeComp extends Component
         }
 
         var my_margin = {
-            margin: "8px 0"
+            textAlign: "justify",
         }
 
         return(
@@ -41,26 +39,21 @@ class HomeComp extends Component
                     <h3>Welcome to MovieMania!</h3>
                     <hr/>
                 </div>
-                <div className="alignright">
-                    <img style={myImg} src="https://scontent.fhyd1-2.fna.fbcdn.net/v/t1.0-9/40006407_1913132192109890_7333126001825677312_n.jpg?_nc_cat=0&oh=5a7f399b71f20025139a3dd6a5f7264c&oe=5C3358E5" width="150px" height="150px"/>
-                    <br/>
-                    <p ><a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed"><i>~Azhar Talha Syed~</i></a></p>
-                </div>
                 <div style={leftCont}>
-                <ul>
-                    <li style={my_margin}>Hello I am <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">Azhar</a>, the founder and developer of MovieMania. 
-                    </li><li style={my_margin}><p>MovieMania is a clone of IMDB where
-                    people can find all the data related to movies and review them.
+                <ul >
+                    <li style={my_margin}><p>Hello I am <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">Azhar</a>, the founder and developer of MovieMania. 
                     </p></li><li style={my_margin}> <p>MovieMania is a single page full stack webapp built using
                     React.js and django-rest framework.</p> 
-                    </li><li style={my_margin}><p>There are three types of users in MovieMaina: Admin, staff and a general user. Each having a specific set of permissions to access pages of the webapp. Which means a person without a permission for a page will not be given an access.</p></li><li>
-                    <p> A staff user will have permissions to add movies/celebs, update movies/celebs and add celebs/genres to movie etc. Basically can perform all
-                    the CRUD operations. 
-                    If you want to have the 
-                    staff permissions please message me your username of the account that you have created in moviemania to my <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">linkedIn</a>.</p>
-                    </li><li style={my_margin}><p>As general user he/she will be able to update the profile, change password and add reviews to the movies, review section will be found at the bottom of every movie page. 
-                    </p></li><li style={my_margin}><p>The main agenda of building this application was to develop a full stack
-                    webapp by myself and get proficient at the mentioned frameworks.</p></li><li style={my_margin}><p> Here is the link to the <a style={ancor} href="https://github.com/azhartalha/Movie-Mania">GitHub repo</a> of the website
+                    </li>
+                    <li style={my_margin}><p>This is a clone of IMDB where
+                    people can find all the data related to movies and review them.
+                    </p></li>
+                    <li style={my_margin}><p>There are three classes of users in MovieMaina: Admin, staff, and a general user. Each having a specific set of permissions to access pages of the webapp. There are three classes of users in MovieMaina: Admin, staff, and a general user. Each having a specific set of permissions required to access corresponding pages of the web app. A user without a mandated permit for a page will not have access to the page.</p></li>
+                    <li>
+                    <p>A Staff user has permissions to add movies/celebs, update movies/celebs, add celebs/genres to a movie, etc. Basically can perform all the CRUD operations. If you wish to have the staff permissions, please message the username of the account that you have created to my <a style={ancor} href="https://www.linkedin.com/in/azhar-talha-syed">LinkedIn</a>.</p>
+                    </li><li style={my_margin}><p>As general user he/she will be able to update the profile, change password, and add reviews to the movies. Review section will be found at the bottom of every movie page. 
+                    </p></li><li style={my_margin}><p>The agenda of building this application was to develop an extensive full stack
+                    webapp by myself and get proficient at the mentioned frameworks.</p></li><li style={my_margin}><p> Here is the link to the <a style={ancor} href="https://github.com/azhartalha/Movie-Mania">GitHub repo</a> of the website, 
                     walk throught the code and use the website if you are intrested. :)
                 </p ></li>
                 </ul>
